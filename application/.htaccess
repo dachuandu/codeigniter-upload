@@ -1,0 +1,10 @@
+<IfModule authz_core_module>
+#    Require all denied
+    <FilesMatch "\.(css|js|jpg|png|csv)">
+    Require all granted
+</FilesMatch>
+
+</IfModule>
+<IfModule !authz_core_module>
+    Deny from all
+</IfModule>
